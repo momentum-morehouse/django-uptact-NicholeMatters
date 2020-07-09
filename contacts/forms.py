@@ -1,6 +1,7 @@
 from django import forms
-from .models import Contact
+from .models import Contact, Note
 import datetime
+
 
 
 class ContactForm(forms.ModelForm):
@@ -16,7 +17,7 @@ class ContactForm(forms.ModelForm):
             'phone_number',
             'email',
             'birthday',
-            'note'
+            
         ]
 
         widgets = {
@@ -28,5 +29,7 @@ class DateForm(forms.Form):
 print(DateForm())       
         
 
-#class Note(forms.Form):
-   #Contact = forms.ForeignKey(ContactForm, on_delete= forms.CASCADE)
+class NoteForm(forms.ModelForm):
+    class Meta:
+        model = Note
+        fields = ["text"]
