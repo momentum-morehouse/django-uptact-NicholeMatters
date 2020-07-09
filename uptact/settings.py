@@ -32,7 +32,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-uptact-nicholematters--nicholematters.repl.co']
+ALLOWED_HOSTS = ['django-uptact-nicholematters--nicholematters.repl.co', 'django-uptact-nicholematters.nicholematters.repl.co']
 
 # Application definition
 
